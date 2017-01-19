@@ -1,0 +1,36 @@
+---
+ip: "192.168.144.77"
+memory: 2048
+cpus: 1
+hostname: ParseX12
+name: ParseX12
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: "./"
+      to: "/home/vagrant/ParseX12"
+
+sites:
+    - map: ParseX12.homestead
+      to: "/home/vagrant/ParseX12/tests/logs/report"
+
+databases:
+    - homestead
+
+# blackfire:
+#     - id: foo
+#       token: bar
+#       client-id: foo
+#       client-token: bar
+
+# ports:
+#     - send: 50000
+#       to: 5000
+#     - send: 7777
+#       to: 777
+#       protocol: udp

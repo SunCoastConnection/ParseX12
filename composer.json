@@ -1,0 +1,35 @@
+{
+    "name": "suncoast-connection/parsex12",
+    "description": "Parse X12 files.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sam Likins",
+            "email": "sam.likins@wsi-services.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "illuminate/config": "5.2.*"
+   	},
+    "require-dev": {
+        "laravel/homestead": "^4",
+        "phploc/phploc": "3.0.*",
+        "phpunit/phpunit": "5.3.*",
+        "mockery/mockery": "0.9.*",
+        "mikey179/vfsStream": "1.6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SunCoastConnection\\ParseX12\\": "source/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SunCoastConnection\\ParseX12\\Tests\\": "tests/source"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}
