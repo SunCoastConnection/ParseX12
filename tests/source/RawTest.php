@@ -412,9 +412,9 @@ class RawTest extends BaseTestCase {
 	}
 
 	/**
-	 * @covers SunCoastConnection\ParseX12\Raw::convertSimple837()
+	 * @covers SunCoastConnection\ParseX12\Raw::convertSimpleX12()
 	 */
-	public function testConvertSimple837() {
+	public function testConvertSimpleX12() {
 		$contents = 'CONTROL HDR 6 7 8 9 '.
 			implode(
 				"\n".'0 1 2 3 4 5 6 7 8 9 ',
@@ -430,10 +430,10 @@ class RawTest extends BaseTestCase {
 			implode('~', $this->document).'~',
 			$this->callProtectedMethod(
 				$this->raw,
-				'convertSimple837',
+				'convertSimpleX12',
 				[ $contents ]
 			),
-			'Simple 837 not converted correctly'
+			'Simple X12 not converted correctly'
 		);
 	}
 

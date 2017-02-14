@@ -102,7 +102,7 @@ class Raw implements Iterator, Countable {
 
 		$this->setInterchangeData($document);
 
-		$document = $this->convertSimple837($document);
+		$document = $this->convertSimpleX12($document);
 
 		$document = str_replace([ "\r", "\n" ] , '', $document);
 
@@ -149,13 +149,13 @@ class Raw implements Iterator, Countable {
 	}
 
 	/**
-	 * Convert a Simple837 format X12 document to a standard X12 document
+	 * Convert a Simple X12 document to a standard X12 document
 	 *
-	 * @param  string  $string  Simple X12N837 document
+	 * @param  string  $string  Simple X12 document
 	 *
-	 * @return string           Converted X12 document
+	 * @return string           Converted standard X12 document
 	 */
-	protected function convertSimple837($string) {
+	protected function convertSimpleX12($string) {
 		if(substr($string, 0, 7) == 'CONTROL') {
 			$string = explode("\n", $string);
 
