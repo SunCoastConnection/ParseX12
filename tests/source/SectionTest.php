@@ -497,7 +497,6 @@ class SectionTest extends BaseTestCase {
 			$objects,
 			'Section not returned in objects'
 		);
-
 	}
 
 }

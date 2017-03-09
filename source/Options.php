@@ -15,7 +15,7 @@ class Options extends Repository {
 	 *
 	 * @return \SunCoastConnection\ParseX12\Options  Options object
 	 */
-	static public function getInstance(array $options) {
+	public static function getInstance(array $options) {
 		return new static($options);
 	}
 

@@ -20,7 +20,7 @@ class Element {
 	 *
 	 * @return \SunCoastConnection\ParseX12\Raw\Element  Element object
 	 */
-	static public function getInstance(Options $options, $element) {
+	public static function getInstance(Options $options, $element) {
 		$object = new static($options);
 
 		$object->parse($element);

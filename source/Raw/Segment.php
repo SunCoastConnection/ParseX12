@@ -12,13 +12,13 @@ class Segment {
 	 * Array of expected elements
 	 * @var array
 	 */
-	static protected $elementSequence = [];
+	protected static $elementSequence = [];
 
 	/**
 	 * Array of element names
 	 * @var array
 	 */
-	static protected $elementNames = [];
+	protected static $elementNames = [];
 
 	/**
 	 * Segment parent name
@@ -40,7 +40,7 @@ class Segment {
 	 *
 	 * @return \SunCoastConnection\ParseX12\Raw\Segment  Segment object
 	 */
-	static public function getInstance(Options $options, $segment) {
+	public static function getInstance(Options $options, $segment) {
 		$delimiterPos = strpos(
 			$segment,
 			$options->get('Document.delimiters.data')
@@ -76,7 +76,7 @@ class Segment {
 	 *
 	 * @return array  Array of expected elements
 	 */
-	static public function getElementSequence() {
+	public static function getElementSequence() {
 		return static::$elementSequence;
 	}
 
@@ -85,7 +85,7 @@ class Segment {
 	 *
 	 * @return array  Array of element names
 	 */
-	static public function getElementNames() {
+	public static function getElementNames() {
 		return static::$elementNames;
 	}
 

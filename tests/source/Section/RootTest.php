@@ -17,7 +17,6 @@ class RootTest extends BaseTestCase {
 		$this->root = $this->getMockery(
 			Root::class
 		)->makePartial();
-
 	}
 
 	/**

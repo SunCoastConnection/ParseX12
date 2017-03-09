@@ -49,7 +49,7 @@ abstract class Section {
 	 *
 	 * @return \SunCoastConnection\ParseX12\Raw  Raw object
 	 */
-	static public function getInstance(Options $options, $parentName = '/') {
+	public static function getInstance(Options $options, $parentName = '/') {
 		return new static($options, $parentName);
 	}
 
@@ -60,7 +60,7 @@ abstract class Section {
 	 *
 	 * @return array  Named sequence
 	 */
-	static public function getSequence($sequence) {
+	public static function getSequence($sequence) {
 		if(property_exists(get_called_class(), $sequence)) {
 			return static::$$sequence;
 		}
